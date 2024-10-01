@@ -17,85 +17,109 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <script
+      src="https://kit.fontawesome.com/bf4d92fefa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#"><div>EK</div></a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About Me</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">My Work</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-              </ul>
-            </div>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><div>EK</div></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </header>
-      <main>
-        <div class="greeting">
-          <h2>👋 Hello There!</h2>
-          <h1>I'm Emma</h1>
-          <h2>A frontend developer working in Canada</h2>
-          <a href="#">Say Hello!</a>
         </div>
-        <div class="mini-portfolio">
-          <div class="row">
-            <div class="col-md-4 weather-mini">
+      </nav>
+    </header>
+    <main>
+      <div class="greeting">
+        <h2>👋 Hello There!</h2>
+        <h1>I'm Emma</h1>
+        <h2>A frontend developer working in Canada</h2>
+        <a href="#" class="say-hello">Say Hello!</a>
+      </div>
+      <div class="mini-portfolio-header">
+        <h3>My Latest Work</h3>
+        <h4>A sample of recent favourites</h4>
+      </div>
+      <div class="mini-portfolio container">
+        <div class="row gy-3">
+          <div class="col-md-4">
+            <div class="mini-content p-3 pb-0 weather-mini minis">
               <h3 class="text-end">What's the Weather?</h3>
               <h4 class="text-end">HTML, CSS, JS</h4>
-            </div>
-            <div class="col-md-8 clock-mini">
-              <h3 class="text-end">What in the World is the Time?</h3>
-              <h4 class="text-end">HTML, CSS, JS</h4>
+              <img src="images/weather.png" alt="weather app image" />
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12 ai-mini">
+          <div class="col-md-8">
+            <div class="mini-content p-3 pb-0 clock-mini minis">
+              <h3 class="text-end">What in the World is the Time?</h3>
+              <h4 class="text-end">HTML, CSS, JS</h4>
+              <img src="images/clock.png" alt="clock app image" />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mini-content p-3 pb-0 ai-mini minis">
               <h3 class="text-end">What if ____ wrote it?</h3>
               <h4 class="text-end">HTML, CSS, JS, AI API Integration</h4>
+              <img src="images/ai.png" alt="ai poet app image" />
             </div>
           </div>
         </div>
-      </main>
-      <footer>
-        <a href="#" target="_blank" title="Link to Instagram">Instagram</a>
-        <a href="#" target="_blank" title="Link to LinkedIn">LinkedIn</a>
-        <a href="#" title="Contact me link">Contact Me</a>
-        <a href="#" target="_blank" title="Github">Github</a>
-        <small
-          >Loosely designed in Figma and coded in Visual Studio Code by yours
+      </div>
+    </main>
+    <footer>
+      <div class="footer-flex">
+        <div class="social-links">
+          <a href="#" target="_blank" title="Link to Instagram">
+            <i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a href="#" target="_blank" title="Link to LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="website-links">
+          <a href="#" title="Contact me link">Contact Me</a>
+          <a href="#" target="_blank" title="Github">Github</a>
+        </div>
+        <div class="website-blurb">
+          Loosely designed in Figma and coded in Visual Studio Code by yours
           truly. Versioned on Github and deployed on Netlify.
-        </small>
-      </footer>
-    </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
