@@ -77,7 +77,7 @@ h4 {
 }
 
 .mini-portfolio-header {
-  margin: 0 0 30px 100px;
+  margin-bottom: 30px;
 }
 
 .mini-portfolio {
@@ -86,8 +86,10 @@ h4 {
 
 .minis h3,
 .minis h4 {
-  border-radius: 8px;
   color: white;
+}
+.minis {
+  border-radius: 8px;
 }
 
 .weather-mini {
