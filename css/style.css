@@ -1,9 +1,13 @@
+:root {
+  --site-box-shadow: 2.6px 5.1px 5.1px hsl(0deg 0% 0% / 0.42);
+  --primary-color: rgb(191, 222, 190);
+}
 nav {
   background: rgba(239, 196, 193, 1);
 }
 
 body {
-  background: rgb(191, 222, 190);
+  background: var(--primary-color);
 }
 h1,
 h2 {
@@ -57,7 +61,7 @@ h4 {
 }
 
 .greeting {
-  background: rgb(191, 222, 190);
+  background: var(--primary-color);
   background: linear-gradient(
     0deg,
     rgba(191, 222, 190, 1) 0%,
@@ -65,6 +69,26 @@ h4 {
     rgba(239, 196, 193, 1) 100%
   );
   padding: 160px 64px 80px 64px;
+}
+
+.nav-link {
+  color: #2a3f30;
+}
+
+.nav-link:hover,
+.active {
+  background: rgba(191, 222, 190, 0.5);
+  border-radius: 15px;
+}
+
+@media (max-width: 576px) {
+  .nav-link:hover {
+    background: none;
+  }
+  .active {
+    background: none;
+    text-decoration: underline;
+  }
 }
 
 .navbar-brand {
@@ -84,24 +108,36 @@ h4 {
   margin-bottom: 60px;
 }
 
+.mini-portfolio-links {
+  text-decoration: none;
+}
+
 .minis h3,
 .minis h4 {
   color: white;
 }
 .minis {
-  border-radius: 8px;
+  border-radius: 30px;
+  transition: all 200ms ease-in-out;
+}
+
+.minis:hover {
+  transform: scale(1.03);
 }
 
 .weather-mini {
   background: #3f612d;
+  box-shadow: var(--site-box-shadow);
 }
 
 .clock-mini {
   background: #a05c7b;
+  box-shadow: var(--site-box-shadow);
 }
 
 .ai-mini {
   background: #944654;
+  box-shadow: var(--site-box-shadow);
 }
 
 footer {
