@@ -1,6 +1,7 @@
 :root {
   --site-box-shadow: 2.6px 5.1px 5.1px hsl(0deg 0% 0% / 0.42);
   --primary-color: rgb(191, 222, 190);
+  --font-color: #2a3f30;
 }
 nav {
   background: rgba(239, 196, 193, 1);
@@ -12,28 +13,33 @@ body {
 h1,
 h2 {
   text-align: center;
+  color: var(--font-color);
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 100px;
 }
 
 h2 {
   font-size: 32px;
   font-weight: 120;
-  color: #2a3f30;
 }
 
 h3 {
   font-size: 24px;
   font-weight: 600;
-  color: #2a3f30;
+  color: var(--font-color);
 }
 
 h4 {
   font-size: 24px;
   font-weight: 120;
-  color: #2a3f30;
+  color: var(--font-color);
+}
+
+p {
+  line-height: 2rem;
+  margin: 20px 0;
 }
 
 .mini-portfolio img {
@@ -43,19 +49,19 @@ h4 {
   padding: 20px 0 0 0;
 }
 
-.say-hello {
+.cta-buttons {
   margin: 50px auto;
-  background: #2a3f30;
+  background: var(--font-color);
   border-radius: 8px;
   color: #fff;
   padding: 10px;
   text-align: center;
   display: block;
-  max-width: 100px;
+  max-width: 130px;
   text-decoration: none;
 }
 
-.say-hello:hover {
+.cta-buttons:hover {
   border-bottom: solid 3px rgba(191, 222, 190, 0.8);
   border-right: solid 3px rgba(191, 222, 190, 0.8);
 }
@@ -66,13 +72,13 @@ h4 {
     0deg,
     rgba(191, 222, 190, 1) 0%,
     rgba(237, 197, 193, 1) 53%,
-    rgba(239, 196, 193, 1) 100%
+    rgb(239, 196, 193) 100%
   );
   padding: 160px 64px 80px 64px;
 }
 
 .nav-link {
-  color: #2a3f30;
+  color: var(--font-color);
 }
 
 .nav-link:hover,
@@ -92,12 +98,19 @@ h4 {
 }
 
 .navbar-brand {
-  background: #a05c7b;
+  background: var(--font-color);
   border-radius: 50%;
   width: 40px;
   height: 40px;
   text-align: center;
-  color: #fff;
+  color: rgb(239, 196, 193);
+  transition: all 150ms ease-in-out;
+  border: solid 1px var(--font-color);
+}
+
+.navbar-brand:hover {
+  background: rgb(239, 196, 193);
+  color: var(--font-color);
 }
 
 .mini-portfolio-header {
@@ -140,6 +153,48 @@ h4 {
   box-shadow: var(--site-box-shadow);
 }
 
+.about-heading {
+  padding-top: 120px;
+}
+
+.about-heading h1,
+.about-heading h2 {
+  text-align: left;
+}
+
+.me-photo {
+  max-width: 70%;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-heading a {
+  margin: 0;
+}
+
+.main-work-images {
+  max-width: 70%;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  text-align: center;
+}
+
+.portfolio p {
+  margin: 0;
+}
+
+.work-contact-header {
+  padding-top: 80px;
+}
+
+.container .cta-buttons {
+  margin-top: 20px;
+}
+
 footer {
   padding: 30px;
 }
@@ -155,7 +210,7 @@ footer {
 }
 
 .social-links a {
-  color: #2a3f30;
+  color: var(--font-color);
 }
 
 .website-links {
@@ -163,7 +218,7 @@ footer {
 }
 
 .website-links a {
-  color: #2a3f30;
+  color: var(--font-color);
   text-decoration: none;
   padding: 0 40px 0 40px;
 }
@@ -172,4 +227,19 @@ footer {
   font-size: 12px;
   padding: 10px;
   max-width: 40%;
+}
+
+@media (max-width: 576px) {
+  .greeting {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+
+  .me-photo {
+    max-width: 100%;
+  }
+
+  .portfolio p {
+    margin-bottom: 20px;
+  }
 }
