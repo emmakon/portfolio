@@ -229,6 +229,10 @@ footer {
   max-width: 40%;
 }
 
+.website-blurb a {
+  color: black;
+}
+
 @media (max-width: 576px) {
   .greeting {
     padding-top: 60px;
